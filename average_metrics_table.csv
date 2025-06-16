@@ -1,0 +1,10 @@
+Model,Avg F1 Score,Avg Recall,Avg Precision,Avg Jaccard Score
+Logistic Regression,92.63,92.52,92.77,86.29
+K-Nearest Neighbors,95.92,95.85,96.0,92.16
+Support Vector Machine,96.0,95.89,96.14,92.31
+Naive Bayes,56.98,64.44,76.2,40.88
+Decision Tree,96.47,96.46,96.49,93.18
+Random Forest,97.09,97.03,97.16,94.35
+Gradient Boosting,97.14,97.07,97.22,94.45
+XGBoost,97.17,97.09,97.27,94.5
+Multi-layer Perceptron,96.94,96.86,97.04,94.07

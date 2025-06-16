@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phishing Detector</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f5f7fa;
+      padding: 15px;
+      width: 320px;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .url {
+      font-size: 14px;
+      color: #555;
+      word-break: break-all;
+      margin-bottom: 20px;
+    }
+
+    .status {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+      opacity: 0;
+      animation: fadeInStatus 0.6s ease forwards;
+      animation-delay: 0.6s;
+    }
+
+    .safe {
+      color: #2e7d32;
+      background: #c8e6c9;
+    }
+
+    .unsafe {
+      color: #c62828;
+      background: #ffcdd2;
+    }
+
+    .loading {
+      color: #888;
+      font-size: 14px;
+      margin-top: 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #888;
+      animation: typing 1.5s steps(14, end), blink-caret 0.75s step-end infinite;
+      width: 0;
+    }
+
+    .icon {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInStatus {
+      to { opacity: 1; }
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 10em; }
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #888; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="icon">🔍</div>
+    <div class="title">Phishing Detector</div>
+    <div class="url" id="url">Detecting URL...</div>
+    <div id="result" class="status loading">Checking...</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

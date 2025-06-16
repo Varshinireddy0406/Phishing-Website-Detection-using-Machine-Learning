@@ -1,0 +1,18 @@
+{
+    "name": "Phishing Detector",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "Detects if a website is phishing using your local ML model.",
+    "permissions": ["tabs", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "128": "icons/icon128.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
